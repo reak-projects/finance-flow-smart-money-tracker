@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# 💰 FinanceFlow — Smart Money Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <img src="https://img.shields.io/badge/React-19-blue.svg?style=for-the-badge&logo=react" alt="React" />
+  <img src="https://img.shields.io/badge/Vite-8-purple.svg?style=for-the-badge&logo=vite" alt="Vite" />
+  <img src="https://img.shields.io/badge/Framer_Motion-12-black.svg?style=for-the-badge&logo=framer" alt="Framer Motion" />
+  <img src="https://img.shields.io/badge/Recharts-3-ff69b4.svg?style=for-the-badge" alt="Recharts" />
+</div>
 
-## Available Scripts
+<br />
 
-In the project directory, you can run:
+**FinanceFlow** is a modern, responsive, full-stack Personal Finance & Expense Analytics Web App.
+Built with a focus on premium aesthetics and usability, this app helps students and young professionals track their income, manage categories, set monthly limits, and visualize financial trends dynamically.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Key Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Transaction Management:** Add, edit, and delete income/expenses. 
+- **Dynamic Dashboard:** Get a quick overview of your current Net Balance, Total Earnings, and Spent Amounts.
+- **Budget Tracking:** Set a monthly budget and visually track how much of it is consumed via animated progress bars.
+- **Advanced Analytics:** Data visualized simply using Donut styling for Categories, Bar Charts for Inflow vs Outflow, and Line Charts for tracking monthly spending history.
+- **Lightning Search & Filters:** Debounced fast search by title or notes, and complex filtering by transaction type (income/expense), date ranges, or category.
+- **100% Client-Side Privacy:** Your financial data is securely maintained using local-storage state. No data leaves your machine.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tech Stack
 
-### `npm run build`
+- **Framework:** React 19 (Functional Components + Hooks), Vite
+- **Routing:** React Router v7
+- **Data Visualization:** Recharts
+- **Forms & Validation:** `react-hook-form` & `yup`
+- **Animations:** Framer Motion
+- **Icons & Notifications:** `react-icons`, `react-toastify`
+- **State Persistence:** Context API + LocalStorage
+- **Styling:** Custom Vanilla CSS with a polished CSS Variables design system.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To get a local copy up and running, follow these simple steps.
 
-### `npm run eject`
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- `npm` or `yarn`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/your-username/financeflow.git
+   cd financeflow
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. **Install NPM packages:**
+   ```bash
+   npm install
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. **Start the Development Server:**
+   ```bash
+   npm run dev
+   ```
+   > The app will usually open at `http://localhost:5173`. Seed data is included to immediately demonstrate analytics capabilities!
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🌍 Deployment
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+FinanceFlow is a Single Page Application (SPA), which means it requires client-side routing setups when deployed. We have pre-configured three major deployment environments for you:
 
-### Code Splitting
+### 1. Vercel (Recommended)
+You do not need to do anything. The repository already contains a `vercel.json` file which defines the rewrite rules (`/*` to `/index.html`) required by React Router.
+- Log into Vercel and import this GitHub repository. Vercel will automatically configure the build command (`npm run build`) and output directory (`dist`).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 2. Netlify
+The repository contains a `netlify.toml` file with predefined routing redirects.
+- Log into Netlify, click "Add new site", and choose "Import an existing project". Your site will deploy gracefully.
 
-### Analyzing the Bundle Size
+### 3. GitHub Pages
+We've included a ready-to-use GitHub Actions workflow file: `.github/workflows/deploy.yml`.
+- If you push to the `main` branch, the workflow will automatically trigger, build the `/dist` bundle, and upload it to GitHub Pages.
+- *Note:* For GitHub pages, ensure you update `base: '/repo-name/'` inside your `vite.config.js` if it isn't deployed at the root domain.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-### Advanced Configuration
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Distributed under the MIT License. See `LICENSE` for more information.
