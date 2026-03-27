@@ -39,7 +39,10 @@ Built with a focus on premium aesthetics and usability, this app helps students 
 ---
 
 ## 🚀 Getting Started
-
+To get direct access
+```
+https://finance-flow-smart-money-tracker.vercel.app/
+```
 To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
